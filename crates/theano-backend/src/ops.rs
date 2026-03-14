@@ -1,4 +1,4 @@
-use theano_types::{DType, Device, Layout, Result};
+use theano_types::{DType, Device, Result};
 
 /// Enumeration of unary operations.
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]

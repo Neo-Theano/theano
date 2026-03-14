@@ -62,7 +62,7 @@ impl CrossEntropyLoss {
 
         // Mean over batch
         let nll_sum: f64 = nll_data.iter().sum();
-        let loss = nll_sum / n as f64;
+        let _loss = nll_sum / n as f64;
 
         // For gradient flow, we need to express this as Variable operations.
         // We'll compute it directly:

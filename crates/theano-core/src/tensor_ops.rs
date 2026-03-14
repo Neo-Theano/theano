@@ -512,7 +512,7 @@ impl Tensor {
         let mut result = vec![0.0f64; out_numel];
 
         // Compute output by iterating over the output multi-index
-        let out_strides = Shape::new(out_shape.clone()).contiguous_strides();
+        let _out_strides = Shape::new(out_shape.clone()).contiguous_strides();
         let ndim = out_shape.len();
 
         // For each element in the output, find which source tensor it comes from
@@ -575,7 +575,7 @@ impl Tensor {
         let d = self.normalize_dim(dim)?;
         let data = self.to_vec_f64()?;
         let shape = self.shape();
-        let strides = Shape::new(shape.to_vec()).contiguous_strides();
+        let _strides = Shape::new(shape.to_vec()).contiguous_strides();
         let numel = self.numel();
 
         // Make contiguous first

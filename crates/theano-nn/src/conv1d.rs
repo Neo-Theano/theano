@@ -154,6 +154,7 @@ impl Module for Conv1d {
     }
 }
 
+#[allow(dead_code)]
 struct Conv1dBackward {
     input_tensor: Tensor,
     weight_tensor: Tensor,

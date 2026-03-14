@@ -1,5 +1,4 @@
-use theano_backend::BackendStorage;
-use theano_types::{DType, Device, DeviceType, Result, TheanoError};
+use theano_types::{DType, Device, DeviceType, Result};
 
 /// Type-erased storage wrapper that dispatches to backend-specific storage at runtime.
 ///

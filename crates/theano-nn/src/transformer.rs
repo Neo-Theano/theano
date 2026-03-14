@@ -1,7 +1,6 @@
 //! Transformer components.
 
 use theano_autograd::Variable;
-use theano_core::Tensor;
 use theano_types::{Device, Result};
 use crate::linear::Linear;
 use crate::module::Module;

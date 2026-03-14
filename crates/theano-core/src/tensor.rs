@@ -221,6 +221,7 @@ impl Tensor {
     }
 
     /// Get the inner Arc (for creating views).
+    #[allow(dead_code)]
     pub(crate) fn inner(&self) -> &TensorInner {
         &self.inner
     }

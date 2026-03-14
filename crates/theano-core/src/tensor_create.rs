@@ -1,4 +1,4 @@
-use theano_types::{DType, Device, Shape, Result, TheanoError};
+use theano_types::{DType, Device, Shape, Result};
 
 use crate::storage::Storage;
 use crate::tensor::Tensor;
@@ -105,7 +105,6 @@ impl Tensor {
     /// Create a tensor filled with values from a standard normal distribution (mean=0, std=1).
     /// Like `torch.randn`.
     pub fn randn(shape: &[usize]) -> Self {
-        use rand::Rng;
         use rand_distr::{Normal, Distribution};
         let numel = if shape.is_empty() { 1 } else { shape.iter().product::<usize>() };
         let normal = Normal::new(0.0, 1.0).unwrap();
@@ -139,7 +138,6 @@ impl Tensor {
     /// Create a tensor filled with values from a normal distribution with given mean and std.
     /// Like `torch.normal`.
     pub fn normal(mean: f64, std: f64, shape: &[usize]) -> Self {
-        use rand::Rng;
         use rand_distr::{Normal, Distribution};
         let numel = if shape.is_empty() { 1 } else { shape.iter().product::<usize>() };
         let normal = Normal::new(mean, std).unwrap();

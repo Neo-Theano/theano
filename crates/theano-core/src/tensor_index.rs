@@ -34,7 +34,7 @@ impl Tensor {
         let mut result = vec![0.0f64; out_numel];
 
         let src_strides = Shape::new(src_shape.to_vec()).contiguous_strides();
-        let out_strides = Shape::new(out_shape.clone()).contiguous_strides();
+        let _out_strides = Shape::new(out_shape.clone()).contiguous_strides();
         let ndim = src_shape.len();
 
         // Iterate over output multi-index

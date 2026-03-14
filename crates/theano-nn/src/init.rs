@@ -1,6 +1,5 @@
 //! Parameter initialization functions, mirroring PyTorch's `nn.init`.
 
-use rand::Rng;
 use rand_distr::{Distribution, Normal, Uniform};
 use theano_autograd::Variable;
 use theano_core::Tensor;

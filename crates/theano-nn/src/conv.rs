@@ -217,6 +217,7 @@ impl Module for Conv2d {
     }
 }
 
+#[allow(dead_code)]
 struct Conv2dBackward {
     input_tensor: Tensor,
     weight_tensor: Tensor,
